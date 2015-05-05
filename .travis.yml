@@ -1,0 +1,14 @@
+language: cpp
+compiler:
+  - gcc
+  - clang
+# Change this to your needs
+sudo: false
+script: ./configure && make && make check
+
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#nmap"
+    on_success: change
+    on_failure: always
